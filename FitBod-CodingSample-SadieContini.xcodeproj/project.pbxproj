@@ -25,7 +25,7 @@
 		5A5CBB3F1FFA177E001B264B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2FB81FECBB5A00204A37 /* DataManager.swift */; };
 		5A5CBB401FFA1A52001B264B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2FBA1FECBDF400204A37 /* Exercise.swift */; };
 		5A5CBB441FFC7D04001B264B /* ExerciseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5CBB431FFC7D04001B264B /* ExerciseTest.swift */; };
-		5AB60B40200019C5004B239E /* FitBod-CodingSample-SadieContini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB60B3F200019C5004B239E /* FitBod-CodingSample-SadieContini.swift */; };
+		5AB60B40200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB60B3F200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		5A5CBB3B1FFA16EE001B264B /* DataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTest.swift; sourceTree = "<group>"; };
 		5A5CBB3D1FFA1705001B264B /* workoutDataTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = workoutDataTest.txt; sourceTree = "<group>"; };
 		5A5CBB431FFC7D04001B264B /* ExerciseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTest.swift; sourceTree = "<group>"; };
-		5AB60B3F200019C5004B239E /* FitBod-CodingSample-SadieContini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FitBod-CodingSample-SadieContini.swift"; sourceTree = "<group>"; };
+		5AB60B3F200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitBod_CodingSample_SadieContiniTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				5A2A2FA91FECB45200204A37 /* Info.plist */,
-				5AB60B3F200019C5004B239E /* FitBod-CodingSample-SadieContini.swift */,
+				5AB60B3F200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift */,
 			);
 			path = "FitBod-CodingSample-SadieContiniTests";
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 			files = (
 				5A5CBB3F1FFA177E001B264B /* DataManager.swift in Sources */,
 				5A5CBB3C1FFA16EE001B264B /* DataManagerTest.swift in Sources */,
-				5AB60B40200019C5004B239E /* FitBod-CodingSample-SadieContini.swift in Sources */,
+				5AB60B40200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift in Sources */,
 				5A5CBB401FFA1A52001B264B /* Exercise.swift in Sources */,
 				5A5CBB441FFC7D04001B264B /* ExerciseTest.swift in Sources */,
 			);
