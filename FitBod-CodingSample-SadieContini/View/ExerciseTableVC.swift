@@ -24,9 +24,19 @@ class ExerciseTableVC: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setUI()
+        
         // TODO: show user activity indicator, progress bar,
         // etc. if data hasn't been loaded yet
         tableView?.reloadData()
+    }
+    
+    func setUI() {
+            // bar background color
+            navigationController?.navigationBar.barTintColor = .black
+            
+            // bar button color
+            navigationController?.navigationBar.tintColor = .white
     }
     
     //MARK: - UITableViewDelegate
@@ -50,7 +60,7 @@ extension ExerciseTableVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ExerciseTableCell.self),
                                                  for: indexPath) as! ExerciseTableCell
         let exercise = dataManager.exercises[indexPath.row]
-        cell.configure(withExercise: exercise, oneRepMax: 100)
+        cell.configure(withExercise: exercise)
         return cell
     }
     

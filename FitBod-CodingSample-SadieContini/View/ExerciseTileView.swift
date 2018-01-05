@@ -17,18 +17,12 @@ class ExerciseTileView: BaseReusableXibView {
     var exercise: Exercise! {
         didSet {
             nameLabel?.text = exercise.name
-        }
-    }
-    
-    var oneRepMax: Int! {
-        didSet {
-            oneRepMaxLabel?.text = String(oneRepMax)
+            oneRepMaxLabel?.text = String(exercise.oneRepMax())
         }
     }
     
     // MARK: - Configure UI
-    func configure(withExercise ex: Exercise, oneRepMax repMax: Int) {
+    func configure(withExercise ex: Exercise) {
         exercise = ex
-        oneRepMax = repMax
     }
 }

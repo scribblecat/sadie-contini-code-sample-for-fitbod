@@ -41,14 +41,14 @@ class DataManager {
             
             // example data file line:
             // Jun 06 2017,Barbell Bench Press,1,10,45
-            let date = fields[0]
             let exerciseName = fields[1]
             
-            if let reps = Int(fields[3]),
+            if let date = DataManager.dateFromDataFileString(fields[0]),
+                let reps = Int(fields[3]),
                 let lbs = Int(fields[4]) {
                 
                 // Find or append this exercise
-                var thisExercise = Exercise(name: exerciseName, workouts: [Workout]())
+                var thisExercise = Exercise(name: exerciseName)
                 let exercisesFiltered = exercises.filter{ $0.name == thisExercise.name }
                 if let existingExercise = exercisesFiltered.first {
                     thisExercise = existingExercise
@@ -57,14 +57,16 @@ class DataManager {
                 }
                 
                 // Find or append this workout
-                var thisWorkout = Workout(date: date, sets: [Set]())
-                let thisSet = Set(numberOfReps: reps, lbs: lbs)
+                var thisWorkout = Workout(date: date)
                 let filteredWorkouts = thisExercise.workouts.filter{ $0.date == date}
                 if let existingWorkout = filteredWorkouts.first {
                     thisWorkout = existingWorkout
                 } else {
                     thisExercise.workouts.append(thisWorkout)
                 }
+
+                // Append this set
+                let thisSet = Set(numberOfReps: reps, lbs: lbs)
                 thisWorkout.sets.append(thisSet)
             }
         }
@@ -109,5 +111,12 @@ class DataManager {
         cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
         cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
         return cleanFile
+    }
+    
+    class func dateFromDataFileString(_ dateText: String) -> Date? {
+        // example: Oct 29 2016
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "MMM dd yyyy"
+        return dateformatter.date(from: dateText)
     }
 }

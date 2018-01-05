@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import FitBod_CodingSample_SadieContini
 
 class DataManagerTest: XCTestCase, DataManagerDelegate {
     
@@ -22,23 +23,19 @@ class DataManagerTest: XCTestCase, DataManagerDelegate {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLoadData() {
         manager.delegate = self
+        manager.exercises = [Exercise]()
         manager.loadData(fileName: "workoutDataTest")
     }
     
     func completeTest() {
         let exercises = manager.exercises
         XCTAssert(exercises.count == 3, "exercises count should be 3 but is: \(exercises.count)")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        // Back Squats in test
+        // TODO: move exercises to dict instead of array?
+        XCTAssert(exercises[0].workouts.count == 3, "\(exercises[0].name) workout count should be 3 but is: \(exercises[0].workouts.count)")
+        XCTAssert(exercises[0].workouts[0].sets.count == 7, "\(exercises[0].name) workout count should be 3 but is: \(exercises[0].workouts.count)")
     }
     
     func didLoadData() {

@@ -12,7 +12,6 @@
 		5A2A2F981FECB45200204A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2A2F961FECB45200204A37 /* Main.storyboard */; };
 		5A2A2F9A1FECB45200204A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2A2F991FECB45200204A37 /* Assets.xcassets */; };
 		5A2A2F9D1FECB45200204A37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2A2F9B1FECB45200204A37 /* LaunchScreen.storyboard */; };
-		5A2A2FA81FECB45200204A37 /* FitBod_CodingSample_SadieContiniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2FA71FECB45200204A37 /* FitBod_CodingSample_SadieContiniTests.swift */; };
 		5A2A2FB31FECB5EB00204A37 /* ExerciseTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2A2FB21FECB5EB00204A37 /* ExerciseTileView.xib */; };
 		5A2A2FB51FECB60C00204A37 /* ExerciseTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2FB41FECB60C00204A37 /* ExerciseTileView.swift */; };
 		5A2A2FB71FECBB2000204A37 /* workoutData.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A2A2FB61FECBB2000204A37 /* workoutData.txt */; };
@@ -25,6 +24,8 @@
 		5A5CBB3E1FFA1705001B264B /* workoutDataTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A5CBB3D1FFA1705001B264B /* workoutDataTest.txt */; };
 		5A5CBB3F1FFA177E001B264B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2FB81FECBB5A00204A37 /* DataManager.swift */; };
 		5A5CBB401FFA1A52001B264B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2FBA1FECBDF400204A37 /* Exercise.swift */; };
+		5A5CBB441FFC7D04001B264B /* ExerciseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5CBB431FFC7D04001B264B /* ExerciseTest.swift */; };
+		5AB60B40200019C5004B239E /* FitBod-CodingSample-SadieContini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB60B3F200019C5004B239E /* FitBod-CodingSample-SadieContini.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 		5A2A2F9C1FECB45200204A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A2A2F9E1FECB45200204A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A2A2FA31FECB45200204A37 /* FitBod-CodingSample-SadieContiniTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FitBod-CodingSample-SadieContiniTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A2A2FA71FECB45200204A37 /* FitBod_CodingSample_SadieContiniTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitBod_CodingSample_SadieContiniTests.swift; sourceTree = "<group>"; };
 		5A2A2FA91FECB45200204A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A2A2FB21FECB5EB00204A37 /* ExerciseTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseTileView.xib; sourceTree = "<group>"; };
 		5A2A2FB41FECB60C00204A37 /* ExerciseTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTileView.swift; sourceTree = "<group>"; };
@@ -58,6 +58,8 @@
 		5A5CBB391FF9F794001B264B /* BaseReusableXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReusableXibView.swift; sourceTree = "<group>"; };
 		5A5CBB3B1FFA16EE001B264B /* DataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTest.swift; sourceTree = "<group>"; };
 		5A5CBB3D1FFA1705001B264B /* workoutDataTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = workoutDataTest.txt; sourceTree = "<group>"; };
+		5A5CBB431FFC7D04001B264B /* ExerciseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTest.swift; sourceTree = "<group>"; };
+		5AB60B3F200019C5004B239E /* FitBod-CodingSample-SadieContini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FitBod-CodingSample-SadieContini.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,7 @@
 				5A2A2F9B1FECB45200204A37 /* LaunchScreen.storyboard */,
 				5A5CBB381FF9D9A7001B264B /* View */,
 				5A5CBB411FFA1CC7001B264B /* Data */,
-				5A2A2FBA1FECBDF400204A37 /* Exercise.swift */,
+				5A5CBB421FFC3E40001B264B /* Model */,
 			);
 			path = "FitBod-CodingSample-SadieContini";
 			sourceTree = "<group>";
@@ -114,8 +116,8 @@
 		5A2A2FA61FECB45200204A37 /* FitBod-CodingSample-SadieContiniTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A2A2FA71FECB45200204A37 /* FitBod_CodingSample_SadieContiniTests.swift */,
 				5A2A2FA91FECB45200204A37 /* Info.plist */,
+				5AB60B3F200019C5004B239E /* FitBod-CodingSample-SadieContini.swift */,
 			);
 			path = "FitBod-CodingSample-SadieContiniTests";
 			sourceTree = "<group>";
@@ -142,6 +144,15 @@
 				5A5CBB3D1FFA1705001B264B /* workoutDataTest.txt */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		5A5CBB421FFC3E40001B264B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A2FBA1FECBDF400204A37 /* Exercise.swift */,
+				5A5CBB431FFC7D04001B264B /* ExerciseTest.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A2A2FA81FECB45200204A37 /* FitBod_CodingSample_SadieContiniTests.swift in Sources */,
 				5A5CBB3F1FFA177E001B264B /* DataManager.swift in Sources */,
 				5A5CBB3C1FFA16EE001B264B /* DataManagerTest.swift in Sources */,
+				5AB60B40200019C5004B239E /* FitBod-CodingSample-SadieContini.swift in Sources */,
 				5A5CBB401FFA1A52001B264B /* Exercise.swift in Sources */,
+				5A5CBB441FFC7D04001B264B /* ExerciseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

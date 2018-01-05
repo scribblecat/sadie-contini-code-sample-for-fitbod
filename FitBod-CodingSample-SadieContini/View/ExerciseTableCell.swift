@@ -13,7 +13,7 @@ class ExerciseTableCell: UITableViewCell {
     @IBOutlet weak var tileView: ExerciseTileView!
     
     // MARK: - Configure UI
-    func configure(withExercise ex: Exercise, oneRepMax repMax: Int) {
-        tileView.configure(withExercise: ex, oneRepMax: repMax)
+    func configure(withExercise ex: Exercise) {
+        tileView.configure(withExercise: ex)
     }
 }

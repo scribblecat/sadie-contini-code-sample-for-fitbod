@@ -23,7 +23,6 @@ class ExerciseDetailVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        exerciseTileView.configure(withExercise: exercise,
-                                   oneRepMax: 100)
+        exerciseTileView.configure(withExercise: exercise)
     }
 }
