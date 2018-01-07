@@ -19,28 +19,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Aee-mh-lRZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="440.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA3-ff-loG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNB-o8-9x6" customClass="ExerciseTileView" customModule="FitBod_CodingSample_SadieContini" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30.5" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="SSm-8A-J3W"/>
+                                            <constraint firstAttribute="height" constant="90" id="SSm-8A-J3W"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="ExerciseTileView"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbA-O0-3bJ" userLabel="Chart View">
-                                        <rect key="frame" x="0.0" y="140.5" width="375" height="300"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbA-O0-3bJ" userLabel="Outer Chart Container View">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbr-Ve-fmg" userLabel="Chart Container View" customClass="ChartView" customModule="FitBod_CodingSample_SadieContini" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="335" height="160"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="G4m-An-d4J"/>
+                                            <constraint firstAttribute="height" constant="200" id="G4m-An-d4J"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zbr-Ve-fmg" secondAttribute="bottom" constant="20" id="Q94-KV-hXJ"/>
+                                            <constraint firstItem="Zbr-Ve-fmg" firstAttribute="leading" secondItem="rbA-O0-3bJ" secondAttribute="leading" constant="20" id="S59-V7-vZn"/>
+                                            <constraint firstItem="Zbr-Ve-fmg" firstAttribute="top" secondItem="rbA-O0-3bJ" secondAttribute="top" constant="20" id="c9n-OA-keu"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zbr-Ve-fmg" secondAttribute="trailing" constant="20" id="yZ9-lR-ARz"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -56,6 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="69F-Bp-EVm"/>
                     </view>
                     <connections>
+                        <outlet property="chartView" destination="Zbr-Ve-fmg" id="Hff-aS-dDV"/>
                         <outlet property="exerciseTileView" destination="QNB-o8-9x6" id="Uvh-a4-8Ep"/>
                     </connections>
                 </viewController>
@@ -68,11 +72,11 @@
             <objects>
                 <viewController storyboardIdentifier="ExerciseTableVC" id="BYZ-38-t0r" customClass="ExerciseTableVC" customModule="FitBod_CodingSample_SadieContini" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-SR-0iT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseTableCell" id="GMx-fJ-9hr" customClass="ExerciseTableCell" customModule="FitBod_CodingSample_SadieContini" customModuleProvider="target">
@@ -127,11 +131,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lof-DR-fga" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7jl-mI-Dwk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="7jl-mI-Dwk">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1BE90B2002BA25005AFE29 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB60B5520005560004B239E /* Charts.framework */; };
 		5A2A2F931FECB45200204A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2F921FECB45200204A37 /* AppDelegate.swift */; };
 		5A2A2F951FECB45200204A37 /* ExerciseTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2F941FECB45200204A37 /* ExerciseTableVC.swift */; };
 		5A2A2F981FECB45200204A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2A2F961FECB45200204A37 /* Main.storyboard */; };
@@ -26,6 +27,12 @@
 		5A5CBB401FFA1A52001B264B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A2FBA1FECBDF400204A37 /* Exercise.swift */; };
 		5A5CBB441FFC7D04001B264B /* ExerciseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5CBB431FFC7D04001B264B /* ExerciseTest.swift */; };
 		5AB60B40200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB60B3F200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift */; };
+		5AB60B542000522D004B239E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB60B532000522D004B239E /* ChartView.swift */; };
+		5AB60B5620005560004B239E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB60B5520005560004B239E /* Charts.framework */; };
+		5AB60B5720005560004B239E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB60B5520005560004B239E /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AB60B5920005A3A004B239E /* ChartViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB60B5820005A3A004B239E /* ChartViewTests.swift */; };
+		5AB60B5B20005AC1004B239E /* TestExerciseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB60B5A20005AC1004B239E /* TestExerciseFactory.swift */; };
+		5AB60B5C2002AB3D004B239E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB60B532000522D004B239E /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,20 @@
 			remoteInfo = "FitBod-CodingSample-SadieContini";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5AB60B50200047A8004B239E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5AB60B5720005560004B239E /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5A2A2F8F1FECB45200204A37 /* FitBod-CodingSample-SadieContini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FitBod-CodingSample-SadieContini.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +81,10 @@
 		5A5CBB3D1FFA1705001B264B /* workoutDataTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = workoutDataTest.txt; sourceTree = "<group>"; };
 		5A5CBB431FFC7D04001B264B /* ExerciseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTest.swift; sourceTree = "<group>"; };
 		5AB60B3F200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitBod_CodingSample_SadieContiniTests.swift; sourceTree = "<group>"; };
+		5AB60B532000522D004B239E /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		5AB60B5520005560004B239E /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		5AB60B5820005A3A004B239E /* ChartViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewTests.swift; sourceTree = "<group>"; };
+		5AB60B5A20005AC1004B239E /* TestExerciseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExerciseFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB60B5620005560004B239E /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,18 +100,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1BE90B2002BA25005AFE29 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1BE90A2002BA25005AFE29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A1BE90D2002CA70005AFE29 /* Exercise Chart */ = {
+			isa = PBXGroup;
+			children = (
+				5AB60B532000522D004B239E /* ChartView.swift */,
+				5AB60B5820005A3A004B239E /* ChartViewTests.swift */,
+			);
+			path = "Exercise Chart";
+			sourceTree = "<group>";
+		};
+		5A1BE90E2002CA82005AFE29 /* Exercise Tile */ = {
+			isa = PBXGroup;
+			children = (
+				5A2A2FB41FECB60C00204A37 /* ExerciseTileView.swift */,
+				5A2A2FB21FECB5EB00204A37 /* ExerciseTileView.xib */,
+				5A5CBB391FF9F794001B264B /* BaseReusableXibView.swift */,
+			);
+			path = "Exercise Tile";
+			sourceTree = "<group>";
+		};
 		5A2A2F861FECB45200204A37 = {
 			isa = PBXGroup;
 			children = (
+				5AB60B5520005560004B239E /* Charts.framework */,
 				5A2A2F911FECB45200204A37 /* FitBod-CodingSample-SadieContini */,
 				5A2A2FA61FECB45200204A37 /* FitBod-CodingSample-SadieContiniTests */,
 				5A2A2F901FECB45200204A37 /* Products */,
+				5A1BE90A2002BA25005AFE29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +173,7 @@
 			children = (
 				5A2A2FA91FECB45200204A37 /* Info.plist */,
 				5AB60B3F200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift */,
+				5AB60B5A20005AC1004B239E /* TestExerciseFactory.swift */,
 			);
 			path = "FitBod-CodingSample-SadieContiniTests";
 			sourceTree = "<group>";
@@ -128,9 +184,8 @@
 				5A2A2F941FECB45200204A37 /* ExerciseTableVC.swift */,
 				5A5CBB361FF9AB2A001B264B /* ExerciseTableCell.swift */,
 				5A5CBB341FF97D86001B264B /* ExerciseDetailVC.swift */,
-				5A2A2FB41FECB60C00204A37 /* ExerciseTileView.swift */,
-				5A2A2FB21FECB5EB00204A37 /* ExerciseTileView.xib */,
-				5A5CBB391FF9F794001B264B /* BaseReusableXibView.swift */,
+				5A1BE90E2002CA82005AFE29 /* Exercise Tile */,
+				5A1BE90D2002CA70005AFE29 /* Exercise Chart */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +220,8 @@
 				5A2A2F8B1FECB45200204A37 /* Sources */,
 				5A2A2F8C1FECB45200204A37 /* Frameworks */,
 				5A2A2F8D1FECB45200204A37 /* Resources */,
+				5AB60B50200047A8004B239E /* Embed Frameworks */,
+				5AB60B51200047C5004B239E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +313,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5AB60B51200047C5004B239E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A2A2F8B1FECB45200204A37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,6 +340,7 @@
 				5A2A2FB91FECBB5A00204A37 /* DataManager.swift in Sources */,
 				5A2A2FB51FECB60C00204A37 /* ExerciseTileView.swift in Sources */,
 				5A5CBB351FF97D86001B264B /* ExerciseDetailVC.swift in Sources */,
+				5AB60B542000522D004B239E /* ChartView.swift in Sources */,
 				5A5CBB371FF9AB2A001B264B /* ExerciseTableCell.swift in Sources */,
 				5A2A2FBB1FECBDF400204A37 /* Exercise.swift in Sources */,
 				5A2A2F931FECB45200204A37 /* AppDelegate.swift in Sources */,
@@ -280,7 +355,10 @@
 				5A5CBB3C1FFA16EE001B264B /* DataManagerTest.swift in Sources */,
 				5AB60B40200019C5004B239E /* FitBod_CodingSample_SadieContiniTests.swift in Sources */,
 				5A5CBB401FFA1A52001B264B /* Exercise.swift in Sources */,
+				5AB60B5B20005AC1004B239E /* TestExerciseFactory.swift in Sources */,
 				5A5CBB441FFC7D04001B264B /* ExerciseTest.swift in Sources */,
+				5AB60B5920005A3A004B239E /* ChartViewTests.swift in Sources */,
+				5AB60B5C2002AB3D004B239E /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +505,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXRTMMS4GE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "FitBod-CodingSample-SadieContini/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sadiecontini.FitBod-CodingSample-SadieContini";
@@ -442,6 +524,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXRTMMS4GE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "FitBod-CodingSample-SadieContini/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sadiecontini.FitBod-CodingSample-SadieContini";
@@ -458,6 +544,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXRTMMS4GE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "FitBod-CodingSample-SadieContiniTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sadiecontini.FitBod-CodingSample-SadieContiniTests";
@@ -475,6 +565,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXRTMMS4GE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "FitBod-CodingSample-SadieContiniTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sadiecontini.FitBod-CodingSample-SadieContiniTests";

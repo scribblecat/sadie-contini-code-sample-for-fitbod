@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Charts
 
 class ExerciseDetailVC: UIViewController {
     
     @IBOutlet weak var exerciseTileView: ExerciseTileView!
-
+    @IBOutlet weak var chartView: ChartView!
+    
     var exercise: Exercise!
     
     class func createFromStoryboard(exercise: Exercise) -> ExerciseDetailVC {
@@ -24,5 +26,10 @@ class ExerciseDetailVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         exerciseTileView.configure(withExercise: exercise)
+        chartView.setup(for: exercise)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }

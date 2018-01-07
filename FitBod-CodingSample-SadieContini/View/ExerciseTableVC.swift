@@ -12,7 +12,7 @@ class ExerciseTableVC: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let dataManager = DataManager()
+    let dataManager = DataManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +24,10 @@ class ExerciseTableVC: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setUI()
         
         // TODO: show user activity indicator, progress bar,
         // etc. if data hasn't been loaded yet
         tableView?.reloadData()
-    }
-    
-    func setUI() {
-            // bar background color
-            navigationController?.navigationBar.barTintColor = .black
-            
-            // bar button color
-            navigationController?.navigationBar.tintColor = .white
     }
     
     //MARK: - UITableViewDelegate
@@ -76,7 +67,7 @@ extension ExerciseTableVC: UITableViewDataSource {
 
 // MARK: - DataManagerDelegate
 extension ExerciseTableVC: DataManagerDelegate {
-    // handling race condition --
+    // handling potential data loading race condition --
     // if we get data first, table data loads in viewWillAppear.
     // if we get view first, table data loads here after mgr loads it.
     func didLoadData() {

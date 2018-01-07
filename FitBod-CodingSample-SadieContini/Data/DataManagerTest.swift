@@ -11,7 +11,7 @@ import XCTest
 
 class DataManagerTest: XCTestCase, DataManagerDelegate {
     
-    var manager = DataManager()
+    var manager = DataManager.shared
 
     override func setUp() {
         super.setUp()

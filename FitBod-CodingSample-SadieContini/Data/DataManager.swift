@@ -14,6 +14,10 @@ protocol DataManagerDelegate {
 
 class DataManager {
     
+    // Singleton
+    static let shared = DataManager()
+    private init() {} 
+
     var delegate: DataManagerDelegate?
 
     let dataFileName = "workoutData"
