@@ -59,7 +59,9 @@ class ChartView: CombinedChartView {
         chartData.lineData = LineChartData.init(dataSets: dataSetArray)
         
         xAxis.axisMaximum = chartData.xMax
+        
         data = chartData
+        data?.highlightEnabled = false
     }
     
     private func lineChartDataSet(entries: [Entry],
