@@ -12,10 +12,13 @@ import XCTest
 class DataManagerTest: XCTestCase, DataManagerDelegate {
     
     var manager = DataManager.shared
-
+    var loadDataExpectation: XCTestExpectation!
+    var testDataFileName = "workoutDataTest"
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        manager.delegate = self
+        manager.exercises = [Exercise]()
     }
     
     override func tearDown() {
@@ -24,22 +27,24 @@ class DataManagerTest: XCTestCase, DataManagerDelegate {
     }
     
     func testLoadData() {
-        manager.delegate = self
-        manager.exercises = [Exercise]()
-        manager.loadData(fileName: "workoutDataTest")
+        loadDataExpectation = XCTestExpectation(description: "load data")
+        manager.loadData(fileName: testDataFileName)
+        wait(for: [loadDataExpectation], timeout: 10)
     }
     
-    func completeTest() {
+    func completeTestLoadData() {
         let exercises = manager.exercises
         XCTAssert(exercises.count == 3, "exercises count should be 3 but is: \(exercises.count)")
         
         // Back Squats in test
         XCTAssert(exercises[0].workouts.count == 3, "\(exercises[0].name) workout count should be 3 but is: \(exercises[0].workouts.count)")
         XCTAssert(exercises[0].workouts[0].sets.count == 7, "\(exercises[0].name) workout count should be 3 but is: \(exercises[0].workouts.count)")
+        
+        loadDataExpectation.fulfill()
     }
     
     func didLoadData() {
-        completeTest()
+        completeTestLoadData()
     }
-    
 }
+
