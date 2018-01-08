@@ -32,15 +32,9 @@ class ChartView: CombinedChartView {
         setChartData()
     }
     
-    func createEntryArray(for: Exercise) -> [Entry] {
-        var entryArray = [Entry]()
-        for workout in exercise.workouts {
-            entryArray.append(Entry(date: workout.date, value: workout.oneRepMax()))
-        }
-        entryArray = entryArray.sorted(by: {
-            (a:Entry, b:Entry) -> Bool in
-            return a.date < b.date
-        })
+    func createEntryArray(for exercise: Exercise) -> [Entry] {
+        var entryArray = exercise.workouts.map{Entry(date: $0.date, value: $0.oneRepMax())}
+        entryArray = entryArray.sorted(by: { $0.date < $1.date })
         return entryArray
     }
     
@@ -49,14 +43,8 @@ class ChartView: CombinedChartView {
     // so plotted graph will show there were days in between --
     // and make x axis labels show up weekly.
     func createXAxisArray(for exercise: Exercise) -> [Date] {
-        var xAxisArray = [Date]()
-        for workout in exercise.workouts {
-            xAxisArray.append(workout.date)
-        }
-        xAxisArray = xAxisArray.sorted(by: {
-            (a, b) -> Bool in
-            return a < b
-        })
+        var xAxisArray = exercise.workouts.map{$0.date}
+        xAxisArray = xAxisArray.sorted(by: { $0 < $1 })
         return xAxisArray
     }
     
@@ -70,8 +58,7 @@ class ChartView: CombinedChartView {
         dataSetArray.append(configureLineChartDataSet(lineDataSet))
         chartData.lineData = LineChartData.init(dataSets: dataSetArray)
         
-        xAxis.axisMaximum = chartData.xMax // + 0.25
-        //setMaximumYVisible(chartData.yMax) // yMax includes markers & entries
+        xAxis.axisMaximum = chartData.xMax
         data = chartData
     }
     
@@ -93,8 +80,8 @@ class ChartView: CombinedChartView {
     private func configureChartUI() {
         chartDescription?.enabled = false
         
-        // draw order options: bar, bubble,
-        // candle, line, scatter
+        // draw order options for this combo chart:
+        // bar, bubble, candle, line, scatter
         drawOrder = [DrawOrder.line.rawValue]
         
         drawGridBackgroundEnabled = false
@@ -122,6 +109,7 @@ class ChartView: CombinedChartView {
         xAxis.axisMinimum = 0.0
         xAxis.granularity = 1.0
         xAxis.valueFormatter = self
+        xAxis.avoidFirstLastClippingEnabled = true
         xAxis.drawGridLinesEnabled = false
         xAxis.drawAxisLineEnabled = false
         xAxis.labelTextColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)

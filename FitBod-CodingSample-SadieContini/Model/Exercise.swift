@@ -18,9 +18,8 @@ class Exercise {
     }
 
     func mostRecentOneRepMax() -> Int {
-        // TODO: don't assume that the data is ordered from
-        // earliest to most recent
-        if let workout = workouts.last {
+        let orderedWorkouts = workouts.sorted(by: { $0.date < $1.date })
+        if let workout = orderedWorkouts.last {
             return workout.oneRepMax()
         }
         return 0
@@ -39,7 +38,7 @@ class Exercise {
 // all sets performed on the same date are considered to be
 // part of the same workout for a given exercise.
 class Workout {
-    var date = Date() // date is string for purposes of this code sample
+    var date = Date()
     var sets = [Set]()
     
     convenience init(date: Date) {

@@ -25,15 +25,25 @@ class ChartViewTests: XCTestCase {
     
     func testCreateEntryArray() {
         let chartView = ChartView()
-        let entries = chartView.createEntryArray(for: backSquat)
+        
+        // Exercise with workouts should a chart entry per workout/date
+        var entries = chartView.createEntryArray(for: backSquat)
         XCTAssert(entries.count == 3, "Back Squat should have 3 entries but has \(entries.count) instead")
+        
+        // Exercise without workouts should have no chart entries
+        let emptyExercise = Exercise.init(name: "Exercise Without Workouts")
+        entries = chartView.createEntryArray(for: emptyExercise)
+        XCTAssert(entries.count == 0, "Entries count should be 0 but was \(entries.count)")
     }
     
     // TODO: fix test when you update xAxis creation...
     func testCreateXAxisArray() {
         let chartView = ChartView()
-        let xAxisValues = chartView.createXAxisArray(for: backSquat)
+        var xAxisValues = chartView.createXAxisArray(for: backSquat)
         
+        // Exercise with workouts currently should have
+        // an x axis value per workout/date,
+        // sorted least to most recent
         var date = DataManager.dateFromDataFileString("Oct 15 2016")
         XCTAssert(xAxisValues[0] == date, "X Axis value should be \(date!): \(xAxisValues[0])")
         
@@ -42,6 +52,11 @@ class ChartViewTests: XCTestCase {
         
         date = DataManager.dateFromDataFileString("Oct 11 2017")
         XCTAssert(xAxisValues[2] == date, "X Axis value should be \(date!): \(xAxisValues[2])")
-
+        
+        
+        // Exercise without workouts should currently have no x axis values
+        let emptyExercise = Exercise.init(name: "Exercise Without Workouts")
+        xAxisValues = chartView.createXAxisArray(for: emptyExercise)
+        XCTAssert(xAxisValues.count == 0, "X Axis values count should be 0 but was \(xAxisValues.count)")
     }
 }

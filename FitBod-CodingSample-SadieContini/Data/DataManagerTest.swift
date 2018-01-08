@@ -32,8 +32,8 @@ class DataManagerTest: XCTestCase, DataManagerDelegate {
     func completeTest() {
         let exercises = manager.exercises
         XCTAssert(exercises.count == 3, "exercises count should be 3 but is: \(exercises.count)")
+        
         // Back Squats in test
-        // TODO: move exercises to dict instead of array?
         XCTAssert(exercises[0].workouts.count == 3, "\(exercises[0].name) workout count should be 3 but is: \(exercises[0].workouts.count)")
         XCTAssert(exercises[0].workouts[0].sets.count == 7, "\(exercises[0].name) workout count should be 3 but is: \(exercises[0].workouts.count)")
     }

@@ -22,6 +22,8 @@ class DataManager {
 
     let dataFileName = "workoutData"
     let dataFileExt = "txt"
+    
+    // TODO: consider moving exercises to dict instead of array
     var exercises = [Exercise]()
     
     // MARK: - Data Loading
