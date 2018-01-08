@@ -29,7 +29,7 @@ class DataManager {
     // MARK: - Data Loading
     
     public func loadData(fileName: String? = nil) {
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .background).async {
             self.load(fileName: fileName)
         }
     }
