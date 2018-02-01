@@ -34,8 +34,13 @@ class ExerciseTableVC: UIViewController, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let exercise = dataManager.exercises[indexPath.row]
+        // Member of array is non-optional --
+        // verifying that index exists to know element will be there
+        guard indexPath.row < dataManager.exercises.count else {
+            return
+        }
         
+        let exercise = dataManager.exercises[indexPath.row]
         let vc = ExerciseDetailVC.createFromStoryboard(exercise: exercise)
         navigationController?.pushViewController(vc, animated: true)
         navigationItem.title = " "
@@ -50,8 +55,13 @@ extension ExerciseTableVC: UITableViewDataSource {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ExerciseTableCell.self),
                                                  for: indexPath) as! ExerciseTableCell
-        let exercise = dataManager.exercises[indexPath.row]
-        cell.configure(withExercise: exercise)
+        
+        // Member of array is non-optional --
+        // verifying that index exists to know element will be there
+        if indexPath.row < dataManager.exercises.count {
+            let exercise = dataManager.exercises[indexPath.row]
+            cell.configure(withExercise: exercise)
+        }
         return cell
     }
     

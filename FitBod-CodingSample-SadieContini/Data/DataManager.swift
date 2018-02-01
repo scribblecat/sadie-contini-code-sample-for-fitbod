@@ -22,6 +22,21 @@ class DataManager {
 
     let dataFileName = "workoutData"
     let dataFileExt = "txt"
+ 
+    // example data file line:
+    // Jun 06 2017,Barbell Bench Press,1,10,45
+    enum Field: Int {
+        
+        // if you add an enum value, update count()
+        case date
+        case exerciseName
+        case numberOfSets
+        case numberOfReps
+        case lbs
+        
+        // bit of a cheat, but O(1) for memory and internal to Field
+        static func count() -> Int { return lbs.rawValue + 1 }
+    }
     
     // TODO: consider moving exercises to dict instead of array
     var exercises = [Exercise]()
@@ -41,17 +56,15 @@ class DataManager {
     
         for fields in csvRows {
             
-            guard fields.count == 5 else {
+            guard fields.count == Field.count() else {
                 continue
             }
             
-            // example data file line:
-            // Jun 06 2017,Barbell Bench Press,1,10,45
-            let exerciseName = fields[1]
+            let exerciseName = fields[Field.exerciseName.rawValue]
             
-            if let date = DataManager.dateFromDataFileString(fields[0]),
-                let reps = Int(fields[3]),
-                let lbs = Int(fields[4]) {
+            if let date = DataManager.dateFromDataFileString(fields[Field.date.rawValue]),
+                let reps = Int(fields[Field.numberOfReps.rawValue]),
+                let lbs = Int(fields[Field.lbs.rawValue]) {
                 
                 // Find or append this exercise
                 var thisExercise = Exercise(name: exerciseName)

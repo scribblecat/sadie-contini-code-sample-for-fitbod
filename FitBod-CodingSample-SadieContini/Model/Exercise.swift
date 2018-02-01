@@ -65,6 +65,10 @@ struct Set {
     // using the Brzycki Formula found here:
     // https://en.wikipedia.org/wiki/One-repetition_maximum
     func oneRepMax() -> Int {
+        // TODO: Consider what to do when numberOfReps > lbs,
+        // which returns a negative number?
+        // This could happen if a beginner was starting out
+        // with bicep curls with 5 or 10lb weights...
         return Int(Double(lbs)/(1.0278 - 0.0278*Double(numberOfReps)))
     }
 }
