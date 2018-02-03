@@ -79,6 +79,7 @@
 		5A5CBB3B1FFA16EE001B264B /* DataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTest.swift; sourceTree = "<group>"; };
 		5A5CBB3D1FFA1705001B264B /* workoutDataTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = workoutDataTest.txt; sourceTree = "<group>"; };
 		5A5CBB431FFC7D04001B264B /* ExerciseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTest.swift; sourceTree = "<group>"; };
+		5A7E5DD62025A43C000D8564 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5AB60B532000522D004B239E /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		5AB60B5520005560004B239E /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		5AB60B5820005A3A004B239E /* ChartViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewTests.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		5A2A2F861FECB45200204A37 = {
 			isa = PBXGroup;
 			children = (
+				5A7E5DD62025A43C000D8564 /* README.md */,
 				5AB60B5520005560004B239E /* Charts.framework */,
 				5A2A2F911FECB45200204A37 /* FitBod-CodingSample-SadieContini */,
 				5A2A2FA61FECB45200204A37 /* FitBod-CodingSample-SadieContiniTests */,
