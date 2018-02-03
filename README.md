@@ -6,3 +6,4 @@ Project requirement:
 1. Carthage should be installed at `/usr/local/bin/carthage`
 2. If you need to rebuild the Chart framework on your machine, cd into the project directory and run
 `carthage update --platform iOS --no-use-binaries`
+
